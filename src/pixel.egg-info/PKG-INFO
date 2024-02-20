@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pixel
+Version: 0.0.1
+Summary: Research code for the paper 'Language Modelling with Pixels'
+Home-page: https://github.com/xplip/pixel
+Author: Team PIXEL
+Author-email: p.rust@di.ku.dk
+License: Apache

@@ -1,0 +1,203 @@
+{
+    "os": "Linux-5.11.0-49-generic-x86_64-with-glibc2.33",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-02-20T16:58:13.246588",
+    "startedAt": "2024-02-20T16:58:13.159228",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--model_name_or_path=gowitheflowlab/wikispan-unsup_ensemble_last",
+        "--remove_unused_columns=False",
+        "--dataset_name=allnli",
+        "--do_train",
+        "--do_eval",
+        "--metric_for_best_model=spearman_cosine",
+        "--pooling_mode=mean",
+        "--pooler_add_layer_norm=True",
+        "--dropout_prob=0.1",
+        "--max_seq_length=64",
+        "--max_steps=2600",
+        "--num_train_epochs=10",
+        "--per_device_train_batch_size=128",
+        "--per_device_eval_batch_size=16",
+        "--gradient_accumulation_steps=1",
+        "--learning_rate=3e-5",
+        "--warmup_steps=200",
+        "--run_name=2-allnli-**gowitheflowlab/wikispan-unsup_ensemble_last**-64-128-3e-5-2600",
+        "--output_dir=2-allnli-**gowitheflowlab/wikispan-unsup_ensemble_last**-64-128-3e-5-2600",
+        "--overwrite_cache",
+        "--logging_strategy=steps",
+        "--logging_steps=200",
+        "--evaluation_strategy=steps",
+        "--eval_steps=200",
+        "--save_strategy=steps",
+        "--save_steps=200",
+        "--save_total_limit=5",
+        "--load_best_model_at_end=True",
+        "--seed=42",
+        "--fallback_fonts_dir=data/fallback_fonts"
+    ],
+    "state": "running",
+    "program": "/home/chenghao/Desktop/pixel-repo/pixel4language/scripts/training/run_contrastive_training_eval.py",
+    "codePathLocal": "scripts/training/run_contrastive_training_eval.py",
+    "codePath": "scripts/training/run_contrastive_training_eval.py",
+    "git": {
+        "remote": "git@github.com:zhh6425/pixel4language.git",
+        "commit": "8daff9c7ed41fe3f1a0a52caf054a4ea3dad051f"
+    },
+    "email": "jsbs54@durham.ac.uk",
+    "root": "/home/chenghao/Desktop/pixel-repo/pixel4language",
+    "host": "chenghao-MS-7C37",
+    "username": "chenghao",
+    "executable": "/home/chenghao/miniconda3/envs/pixel/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2988.1199166666665,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4837.187,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4110.6,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 915.3975067138672,
+            "used": 829.8427314758301
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25447170048
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25411846144
+        }
+    ],
+    "memory": {
+        "total": 31.27239227294922
+    }
+}

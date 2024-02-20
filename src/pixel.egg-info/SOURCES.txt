@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/pixel.egg-info/PKG-INFO
+src/pixel.egg-info/SOURCES.txt
+src/pixel.egg-info/dependency_links.txt
+src/pixel.egg-info/top_level.txt
+src/pixel.egg-info/zip-safe
