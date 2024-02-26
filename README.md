@@ -63,3 +63,7 @@ Step 3: multilingual transfer step:
 bash run_bash/3-run_allnli-pm.sh
 ```
 Go back and forth between Step 2 and Step 3 (see paper for exact procedure of the iterative training where "leapfrogging" pattern is found!) for 2-3 times for maximum performance, please end the training with English allnli, instead of parallel data.
+
+## Note
+
+We find that training with an extra MLP (using ```PIXELForSequenceClassification``` class) but do inference without (using ```PIXELForRepresentation```, which then drops the MLP), boosts the semantics performance a little bit, providing the performance in the latest version of the paper.
