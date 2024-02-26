@@ -1,6 +1,7 @@
-export MODEL="allnli_wikispan_unsup_ensemble_last"
+export MODEL="zxh4546/allnli_wikispan_unsup_ensemble_last"
+# the checkpoint that has gone through English visual, topical, and reasoning alignment, 
+#we provide one we trained here.
 export DATASETNAME='parallel-medium'
-# in the training script, we currently remove all huggingface dataset names  for anonymity
 export POOLING_MODE="mean"
 export SEQ_LEN=64
 export FALLBACK_FONTS_DIR="data/fallback_fonts"

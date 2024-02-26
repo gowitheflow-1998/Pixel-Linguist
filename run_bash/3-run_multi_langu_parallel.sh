@@ -1,6 +1,6 @@
 export MODEL="3-parallel-medium-nli-pm-64-128-3e-5-205000/checkpoint-205000"
+# the checkpoint name that has gone through parallel-medium.
 export DATASETNAME='allnli'
-# in the training script, we currently remove all huggingface dataset names  for anonymity
 export POOLING_MODE="mean"
 export SEQ_LEN=64
 export FALLBACK_FONTS_DIR="data/fallback_fonts"

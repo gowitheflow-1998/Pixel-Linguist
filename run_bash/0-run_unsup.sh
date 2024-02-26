@@ -1,9 +1,10 @@
 export MODEL="Team-PIXEL/pixel-base" # we initialize from pixel base
 export DATASETNAME='unsup-wc' # refer to dataset keys in "scripts/training/run_contrastive_training_eval.py"
+                              # we have four unsup datasets.
 export POOLING_MODE="mean"
 export SEQ_LEN=64
 export FALLBACK_FONTS_DIR="data/fallback_fonts"
-export BSZ=128 # can do other numbers, but change num_steps accordingly
+export BSZ=768 # can do other numbers, but change num_steps accordingly
 export GRAD_ACCUM=1
 export LR=3e-6
 export SEED=42

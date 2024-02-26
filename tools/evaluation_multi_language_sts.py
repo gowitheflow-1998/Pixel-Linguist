@@ -38,8 +38,6 @@ def sts_evaluation(model_name, language):
     BSZ = 16
 
     datasets_keys = {
-        "snli": ("rungalileo/snli", "premise", "hypothesis"),
-        "mnli": ("SetFit/mnli", "text1", "text2"),
         "mteb": ('mteb/stsbenchmark-sts', "sentence1", "sentence2"),
         "multi-sts": ('stsb_multi_mt', "sentence1", "sentence2")
     }
@@ -105,13 +103,7 @@ def sts_evaluation(model_name, language):
     except AttributeError:
         label_list = None
 
-    # Labels
-    num_labels = 0  # len(label_list) no need
-    if label_list:
-        label_to_id = {v: i for i, v in enumerate(label_list)}
-    else:  # for mnli
-        label_to_id = {'entailment': 0, 'neutral': 1, 'contradiction': 2}
-
+    num_labels = 0  
 
     print(f'Building models for {model_name}')
     config_kwargs = {
@@ -139,9 +131,6 @@ def sts_evaluation(model_name, language):
         **config_kwargs,
     )
 
-    model.config.label2id = label_to_id
-    model.config.id2label = {id: label for label, id in config.label2id.items()}
-
     modality = Modality.IMAGE
     renderer_cls = PangoCairoTextRenderer
     processor = renderer_cls.from_pretrained(
@@ -167,7 +156,7 @@ def sts_evaluation(model_name, language):
     train_dataset.features["pixel_values"] = datasets.Image()
     train_dataset.set_transform(preprocess_fn)
 
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    device = "cuda:1" if torch.cuda.is_available() else "cpu"
 
     model.to(device)
 
@@ -229,8 +218,8 @@ def sts_evaluation(model_name, language):
 if __name__ == "__main__":
     model_pearson_results = []
     model_spearman_results = []
-    model_name = # replace with model name
-    for eval_language in ["en"]:
+    model_name = "Pixel-Linguist/Pixel-Linguist-v0" # replace with model name
+    for eval_language in ["de","fr"]:
         eval_pearson_cosine, eval_spearman_cosine = sts_evaluation(model_name, eval_language)
         model_pearson_results.append(eval_pearson_cosine)
         model_spearman_results.append(eval_spearman_cosine)

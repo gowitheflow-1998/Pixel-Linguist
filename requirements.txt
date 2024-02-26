@@ -10,9 +10,9 @@ pygame
 pyyaml
 scipy
 seqeval
-# sklearn
 spacy
 submitit
 transformers==4.17.0
 wandb
 termcolor
+datasets

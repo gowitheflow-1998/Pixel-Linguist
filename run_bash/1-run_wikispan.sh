@@ -1,6 +1,6 @@
-export MODEL="0-unsup-ensemble-4-last" # the checkpoint trained from last step
+export MODEL="0-unsup-ensemble-4-last" 
+# can be change accordingly. Here we use the ensemble checkpoints trained from last step
 export DATASETNAME='wikispan'
-# in the training script, we currently remove all huggingface dataset names  for anonymity
 export POOLING_MODE="mean"
 export SEQ_LEN=64
 export FALLBACK_FONTS_DIR="data/fallback_fonts"

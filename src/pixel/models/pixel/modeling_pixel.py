@@ -151,13 +151,9 @@ class PIXELForRepresentation(ViTForImageClassification):
 
         self.pooler = PoolingPure(
             hidden_size=config.hidden_size,
-            # hidden_dropout_prob=config.hidden_dropout_prob,
-            # add_layer_norm=add_layer_norm,
             pooling_mode=pooling_mode,
         )
-        self.classifier = nn.Linear(config.hidden_size, config.num_labels) if config.num_labels > 0 else nn.Identity()
-
-        # Initialize weights and apply final processing
+        # self.classifier = nn.Linear(config.hidden_size, config.num_labels) if config.num_labels > 0 else nn.Identity()
         self.post_init()
 
     def forward(
@@ -198,7 +194,7 @@ class PIXELForRepresentation(ViTForImageClassification):
             sequence_output = outputs[0][:, 1:, :]
 
         logits = self.pooler(sequence_output, attention_mask)
-        logits = self.classifier(logits)
+        # logits = self.classifier(logits)
         logits = normalize(logits, p=2, dim=1)
         loss = None
         if labels is not None:
