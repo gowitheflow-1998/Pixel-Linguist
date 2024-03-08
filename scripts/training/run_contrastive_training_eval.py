@@ -76,7 +76,6 @@ datasets_keys = {
     "unsup-wr": ("gowitheflow/wiki1M-word-random-shuffle", "sentence1", "sentence2"),
     "unsup-wc": ("gowitheflow/wiki1M-word-condition-shuffle", "sentence1", "sentence2"),
     "unsup-wa": ("gowitheflow/wiki1M-word-character-all-multiple", "sentence1", "sentence2"),
-    "para":("sentence-transformers/parallel-sentences", "Membership of Parliament: see Minutes", "Състав на Парламента: вж. протоколи"),
     "wikispan":("gowitheflow/wiki-span", "sentence1", "sentence2"),
     "en-de": ("gowitheflowlab/nli-sts-en-de", "sentence1", "sentence2"),
     "en-es": ("gowitheflowlab/nli-sts-en-es", "sentence1", "sentence2"),
