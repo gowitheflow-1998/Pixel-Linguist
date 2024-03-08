@@ -8,7 +8,7 @@
 
 ## Overview
 <p align="center">
-  <img src="figures/figure1.png" width="600">
+  <img src="figures/figure1.png" width="550">
 </p>
 
 ## Installation
@@ -51,7 +51,7 @@ It is convenient to evaluate on other datasets available on BEIR, other than Nat
 ## Reproduce Pixel Linguist Training
 
 <p align="center">
-  <img src="figures/training.png" width="600">
+  <img src="figures/training.png" width="650">
 </p>
 
 Step 0: Visual alignment step:
@@ -75,7 +75,7 @@ bash run_bash/3-run_allnli-pm.sh
 Go back and forth between Step 2 and Step 3 (see paper for exact procedure of the iterative training where "leapfrogging" pattern is found!) for 2-3 times for maximum performance, please end the training with English allnli, instead of parallel data.
 
 <p align="center">
-  <img src="figures/plot200.png" width="600">
+  <img src="figures/plot200.png" width="800">
 </p>
 
 ## Note
