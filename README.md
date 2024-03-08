@@ -17,6 +17,7 @@ git clone https://github.com/gowitheflow-1998/Pixel-Linguist.git
 ```
 conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
 conda install -c conda-forge pycairo pygobject manimpango scikit-learn
+cd Pixel-Linguist
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -40,7 +41,7 @@ beir:
 ```
 python tools/evaluation_retrieval.py
 ```
-It is convenient to evaluate on other datasets available on BEIR, except Natural Questions. Simply modify dataset name in the script.
+It is convenient to evaluate on other datasets available on BEIR, other than Natural Questions that we evaluated in the paper. Simply modify dataset name in the script.
 
 ## Reproduce Pixel Linguist Training
 

@@ -1,9 +1,6 @@
 from tqdm import tqdm
 import torch
 import numpy as np
-from tqdm import tqdm
-import numpy as np
-import torch
 from PIL import Image
 from pixel import (
     AutoConfig,
@@ -18,11 +15,10 @@ from pixel import (
 )
 import os
 from beir import util
-from beir.retrieval.search.dense import DenseRetrievalExactSearch as DRES
 from typing import List, Dict
+from beir.retrieval.search.dense import DenseRetrievalExactSearch as DRES
 from beir.datasets.data_loader import GenericDataLoader
 from beir.retrieval.evaluation import EvaluateRetrieval
-from beir.retrieval.search.dense import DenseRetrievalExactSearch as DRES
 
 class PixelForRetrieval:
     def __init__(self, model_path=None, **kwargs):
@@ -120,7 +116,7 @@ out_dir = os.path.join("datasets")
 data_path = util.download_and_unzip(url, out_dir)
 corpus, queries, qrels = GenericDataLoader(data_folder=f"datasets/{dataset}").load(split="test")
 
-model_name = # replace with model name
+model_name = "Pixel-Linguist/Pixel-Linguist-v0"
 model = DRES(PixelForRetrieval(model_path=model_name),batch_size=64)
 retriever = EvaluateRetrieval(model, score_function="dot") # or "cos_sim" for cosine similarity
 results = retriever.retrieve(corpus, queries)

@@ -1,14 +1,5 @@
 import copy 
-import argparse
-import copy
-import logging
-import os
 import random
-import sys
-from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
-from tqdm import tqdm
-
 import numpy as np
 import torch
 from PIL import Image
@@ -21,12 +12,8 @@ from pixel import (
     get_attention_mask,
     get_transforms,
     glue_strip_spaces,
-    log_sequence_classification_predictions,
     resize_model_embeddings,
 )
-
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
 
 
 seed = 42
@@ -35,9 +22,6 @@ np.random.seed(seed)
 random.seed(seed) 
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
-check_min_version("4.17.0")
-
-require_version("datasets>=1.8.0", "To fix: pip install ./datasets")
 
 
 datasets_keys = {

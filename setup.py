@@ -5,6 +5,7 @@
 
 from setuptools import find_packages, setup
 
+# shout out to the authors of the vanilla PIXEL model!
 setup(
     name="pixel",
     version="0.0.1",

@@ -123,7 +123,7 @@ def sts_evaluation(model_name, language):
     train_dataset.features["pixel_values"] = datasets.Image()
     train_dataset.set_transform(preprocess_fn)
 
-    device = "cuda:1" if torch.cuda.is_available() else "cpu"
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
     model.to(device)
 
@@ -167,7 +167,7 @@ if __name__ == "__main__":
     model_spearman_results = []
     anisotropy = []
     model_name = "Pixel-Linguist/Pixel-Linguist-v0"
-    for eval_language in ["de"]:
+    for eval_language in ["en"]:
         eval_pearson_cosine, eval_spearman_cosine, ani = sts_evaluation(model_name, eval_language)
         model_pearson_results.append(eval_pearson_cosine)
         model_spearman_results.append(eval_spearman_cosine)
