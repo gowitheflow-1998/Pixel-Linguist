@@ -7,7 +7,9 @@
 - **Paper:** https://arxiv.org/pdf/2402.08183.pdf
 
 ## Overview
-<img src="figures/figure1.png" width="600">
+<p align="center">
+  <img src="figures/figure1.png" width="600">
+</p>
 
 ## Installation
 
