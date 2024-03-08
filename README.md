@@ -6,6 +6,9 @@
 - **Github Repo:** [Github Repo](https://github.com/gowitheflow-1998/Pixel-Linguist)
 - **Paper:** https://arxiv.org/pdf/2402.08183.pdf
 
+## Overview
+<img src="figures/figure1.pdf" width="600">
+
 ## Installation
 
 ```
